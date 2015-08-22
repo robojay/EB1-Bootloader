@@ -21,6 +21,9 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with GemmaBoot. If not, see
 # <http://www.gnu.org/licenses/>.
+#
+# Modified by jay@reactivetechnologies.com for lower brownout voltage of EB1
+#
 ###############################################################################
 
 # Note: if you use "no PLL", then F_CPU should be 12 MHz, but this has proven to not work well, so do not use it
@@ -35,10 +38,12 @@ DEVICE = attiny85
 BOOTLOADER_ADDRESS_HV = 1500
 BOOTLOADER_ADDRESS_LV = 14C0
 
-PROGRAMMER = -c usbtiny -B 1
+PROGRAMMER = -C ./avrdude.conf -c avrisp -P /dev/tty.usbmodemfa1331 -b 19200
 # PROGRAMMER contains AVRDUDE options to address your programmer
 
-FUSEOPT_t85        = -U efuse:w:0xFE:m -U hfuse:w:0xD5:m
+# EB1 fuse setting for brownout between 1.7V and 2.0V
+FUSEOPT_t85        = -U efuse:w:0xFE:m -U hfuse:w:0xD6:m
+#FUSEOPT_t85        = -U efuse:w:0xFE:m -U hfuse:w:0xD5:m  # original Trinket fuse setting
 FUSEOPT_t85_PLL    = -U lfuse:w:0xF1:m $(FUSEOPT_t85)
 FUSEOPT_t85_NO_PLL = -U lfuse:w:0xE2:m $(FUSEOPT_t85)
 # You may have to change the order of these -U commands.
