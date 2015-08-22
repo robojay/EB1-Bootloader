@@ -1,27 +1,18 @@
-EB1-Bootloader
-==============
+#EB1-Bootloader
 
 This is the bootloader for the Samurai Circuits / RobotMaker.club EB1.
 
-Details can be found at:
-http://www.samuraicircuits.com/MediaWiki/index.php?title=EB1
+Details can be found at: http://www.samuraicircuits.com/MediaWiki/index.php?title=EB1
 
-Hardware files can be found here (may not be latest version):
-https://github.com/robojay/EB1
+Hardware files can be found here (may not be latest version): https://github.com/robojay/EB1
 
 This bootloader is derived from Adafruit's Trinket/Gemma bootloader.
 
-=================================
-
-YOU MUST OBTAIN YOUR OWN USB VID/PID FOR YOUR OWN PRODUCTS OR PROJECTS!
-
-For open source projects, this is super easy and free via http://pid.codes
-
-=================================
+**YOU MUST OBTAIN YOUR OWN USB VID/PID FOR YOUR OWN PRODUCTS OR PROJECTS!**
+**For open source projects, this is super easy and free via http://pid.codes**
 
 Below is the original README.md text from the Adafruit repository.
 
-===
 ===
 
 
