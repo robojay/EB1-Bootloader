@@ -35,7 +35,6 @@ Below is the original README.md text from the Adafruit repository (without text 
 
 ===
 
-
 Adafruit-Trinket-Gemma-Bootloader
 
 This is the code for the Trinket/Gemma bootloader. There are two versions, HV (16MHz 5V) and LV (8MHz 3V), but we only use the 3V version and then clock double in the user code.
